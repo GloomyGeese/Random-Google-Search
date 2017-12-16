@@ -1,1 +1,1 @@
-java -jar RandomGoogleSearch1.2.1.jar
+java -jar RandomGoogleSearch1.2.2.jar
