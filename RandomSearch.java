@@ -9,6 +9,17 @@ import java.util.*;
 public class RandomSearch {
 
   public static void main(String[] args) throws IOException, URISyntaxException {
+	  
+	  
+	  
+	  Scanner reader = new Scanner(System.in); // Asks the user for number of searches
+		System.out.println("Enter the number of random google searches you would like:"); 
+		int loop = reader.nextInt();
+		if (loop<1) {
+			System.out.println("That is not a valid number of random google searches.");
+		}
+		
+		while (loop>0) {// while loop
      Map<String,Integer> map = new HashMap<String,Integer>();
      for(int i = 0; i < 1000; ++i)
      {
@@ -34,6 +45,9 @@ public class RandomSearch {
      else {
      d.browse(new URI("https://www.google.com/search?q=" + name + "%20" + name2)); // Opens default browser with the google search query of the random values 
      }
+     loop--;
+     reader.close();
+		}
   }
 
   public static String choose(File f) throws FileNotFoundException // reads the list of words
@@ -48,7 +62,7 @@ public class RandomSearch {
         if(rand.nextInt(n) == 0)
            result = line;         
      }
-
+     n--;
      return result;      
   }
   public static Object getKeyFromValue(Map<String, Integer> hm, Object value) { // gets the word with the #
