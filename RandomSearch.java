@@ -5,10 +5,11 @@ import java.io.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public class RandomSearch {
 
-  public static void main(String[] args) throws IOException, URISyntaxException {
+  public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
 	  
 	  
 	  
@@ -18,7 +19,7 @@ public class RandomSearch {
 		if (loop<1) {
 			System.out.println("That is not a valid number of random google searches.");
 		}
-		
+		int totalloop = loop;
 		while (loop>0) {// while loop
      Map<String,Integer> map = new HashMap<String,Integer>();
      for(int i = 0; i < 1000; ++i)
@@ -46,9 +47,11 @@ public class RandomSearch {
      d.browse(new URI("https://www.google.com/search?q=" + name + "%20" + name2)); // Opens default browser with the google search query of the random values 
      }
      loop--;
-     reader.close();
-     TimeUnit.SECONDS.sleep(5)
+ 
 		}
+	System.out.println("Opened a total of " + totalloop + " random google searches!");
+    reader.close();
+    TimeUnit.SECONDS.sleep(5);
   }
 
   public static String choose(File f) throws FileNotFoundException // reads the list of words
