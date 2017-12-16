@@ -47,6 +47,7 @@ public class RandomSearch {
      }
      loop--;
      reader.close();
+     TimeUnit.SECONDS.sleep(5)
 		}
   }
 
