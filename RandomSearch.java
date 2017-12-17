@@ -20,7 +20,6 @@ public class RandomSearch {
 			System.out.println("That is not a valid number of random google searches.");
 		}
 		int totalloop = loop;
-		while (loop>0) {// while loop
      Map<String,Integer> map = new HashMap<String,Integer>();
      for(int i = 0; i < 1000; ++i)
      {
@@ -29,6 +28,7 @@ public class RandomSearch {
            map.put(s, 0);
         map.put(s, map.get(s) + 1);
      }
+	  while (loop>0) {// while loop
      Random generator = new Random();
      Object[] values = map.values().toArray();
      Object randomValue = values[generator.nextInt(values.length)]; // generates 1st random #
