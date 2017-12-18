@@ -15,6 +15,10 @@ $(document.body).ready(function () {
 
     if (lines && lines.length) {
       $('#button').on('click', function () {
+        var loop = prompt("How many random google searches would you like?")
+        if (loop>0) {
+          while (loop>0) {
+            loop--;
         while (randomNumber === lastRandomNumber) {
           randomNumber = parseInt(Math.random() * lines.length);// makes the word
           randomNumber2 = parseInt(Math.random() * lines.length);// makes the 2nd word
@@ -26,7 +30,8 @@ $(document.body).ready(function () {
         
         // show the corresponding line
         window.open("https://www.google.com/search?q=" + lines[randomNumber] + "%20" + lines[randomNumber2]);
-        
+      }
+      }
         }
       
       );
