@@ -53,6 +53,7 @@ public class RandomSearch {
 	}
 	else {
 		System.out.println("That is not a valid number of random google searches.");
+		TimeUnit.SECONDS.sleep(5);
 	}
   }
 
