@@ -16,9 +16,7 @@ public class RandomSearch {
 	  Scanner reader = new Scanner(System.in); // Asks the user for number of searches
 		System.out.println("Enter the number of random google searches you would like:"); 
 		int loop = reader.nextInt();
-		if (loop<1) {
-			System.out.println("That is not a valid number of random google searches.");
-		}
+		if (loop>0) {
 		int totalloop = loop;
      Map<String,Integer> map = new HashMap<String,Integer>();
      for(int i = 0; i < 1000; ++i)
@@ -52,6 +50,10 @@ public class RandomSearch {
 	System.out.println("Opened a total of " + totalloop + " random google searches!");
     reader.close();
     TimeUnit.SECONDS.sleep(5);
+	}
+	else {
+		System.out.println("That is not a valid number of random google searches.");
+	}
   }
 
   public static String choose(File f) throws FileNotFoundException // reads the list of words
