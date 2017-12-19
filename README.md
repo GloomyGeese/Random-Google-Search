@@ -5,5 +5,7 @@ DISCLAIMER: I AM NOT LIABLE IF YOU USE THIS PROGRAM FOR ANY ILLEGAL ACTIVITIES T
 DISCLAIMER: Credit is due where it is. (Link #1) from the first answer and the link the commentor mentions is (Link #2)
 it is the list of most of the code I adapted to this project, make sure to check out his profile and upvote his posts. Since I don't know much about java script yet the posts did help adapt this project more quickly from java into javascript.
 
+Check out how this program should work with more things to make the site look presentable at http://www.dealsteal.us/rgs.html
+
 Link #1: https://stackoverflow.com/questions/26641574/how-do-i-pull-contents-from-a-txt-file-and-display-a-random-line-of-it-in-html
 Link #2: http://plnkr.co/edit/BUCZOKd0MFDsa2jdMkJs?p=preview
