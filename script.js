@@ -1,13 +1,16 @@
 var lines;
 var randomNumber;
 var lastRandomNumber;
-var loop;
+var randomNumber2;
 
 $(document.body).ready(function () {
   
   // load the words from the server
+  "use strict";
   $.ajax({
+    // switch the comments out if you just want to use the default github searches.txt
     url: 'searches.txt'
+   // url: 'https://raw.githubusercontent.com/GloomyGeese/Random-Google-Search/RGS-JavaScript/searches.txt'
   }).done(function(content) {
     
     lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
@@ -35,4 +38,5 @@ $(document.body).ready(function () {
         }
       
       );
-    }})});
+    }});
+});
