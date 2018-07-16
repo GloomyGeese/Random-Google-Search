@@ -1,6 +1,5 @@
 import random
 import webbrowser
-import time
 import os
 def random_line():
     lines = open('searches.txt').read().splitlines()
